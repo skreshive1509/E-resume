@@ -942,13 +942,14 @@
             });
         }
 
-        document.addEventListener('keydown', event => {
-            if (event.key === 'ArrowRight') {
-                goToSlide(currentSlide + 1);
-            }
-            if (event.key === 'ArrowLeft') {
-                goToSlide(currentSlide - 1);
-            }
+ prevBtn.addEventListener('click', () => {
+            stopAutoplay();
+            goToSlide(currentSlide - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            stopAutoplay();
+            goToSlide(currentSlide + 1);
         });
 
         createSlideDots();
