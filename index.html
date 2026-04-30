@@ -635,8 +635,33 @@
                 grid-template-columns: 1fr;
             }
 
+            .slides-wrapper {
+                min-height: auto;
+                padding-bottom: 16px;
+            }
+
             .slide-control {
-                display: none;
+                display: inline-flex;
+                position: relative;
+                top: auto;
+                transform: none;
+                width: calc(50% - 12px);
+                height: 48px;
+                margin: 10px 6px 0;
+                border-radius: 999px;
+                background: rgba(255,255,255,0.18);
+                box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+            }
+
+            .slide-control:hover {
+                transform: none;
+                background: rgba(255,255,255,0.24);
+            }
+
+            .prev-slide,
+            .next-slide {
+                left: auto;
+                right: auto;
             }
 
             .corner-panel {
